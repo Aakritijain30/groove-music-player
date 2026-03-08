@@ -15,6 +15,7 @@
   --muted: #6b6878;
   --active: #1e1e2c;
 }
+
 body {
   font-family: 'DM Sans', sans-serif;
   background: var(--bg);
@@ -35,6 +36,7 @@ body::before {
   background: radial-gradient(ellipse at 50% 50%, rgba(232,200,64,.05) 0, transparent 70%);
   pointer-events: none;
 }
+
 .app {
   width: 900px;
   max-width: 98vw;
@@ -74,6 +76,7 @@ body::before {
   background: var(--accent);
   display: inline-block;
 }
+
 .vinyl-wrap {
   position: relative;
   width: 100%;
@@ -184,6 +187,7 @@ body::before {
   border-radius: 50%;
   z-index: 5;
 }
+
 .song-info {
   margin-bottom: 18px;
 }
@@ -210,6 +214,7 @@ body::before {
 .song-artist span {
   color: var(--accent);
 }
+
 .progress-wrap {
   margin-bottom: 18px;
 }
@@ -282,6 +287,7 @@ body::before {
   font-size: 10px;
   color: var(--muted);
 }
+
 .controls {
   display: flex;
   align-items: center;
@@ -323,6 +329,7 @@ body::before {
 
 .btn-play:hover  { background: #f0d050; transform: scale(1.05); box-shadow: 0 6px 28px rgba(232,200,64,.6); }
 .btn-play:active { transform: scale(.97); }
+
 .volume-wrap {
   display: flex;
   align-items: center;
@@ -397,6 +404,7 @@ body::before {
 
 .playlist-list::-webkit-scrollbar { width: 3px; }
 .playlist-list::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
 .track {
   display: grid;
   grid-template-columns: 32px 1fr auto;
@@ -504,13 +512,16 @@ body::before {
   padding: 8px 12px;
   transition: border-color .2s;
 }
+
 .search-wrap:focus-within {
   border-color: var(--accent);
 }
+
 .search-icon {
   color: var(--muted);
   flex-shrink: 0;
 }
+
 .search-input {
   flex: 1;
   background: none;
@@ -521,9 +532,11 @@ body::before {
   font-size: 12px;
   letter-spacing: 0.3px;
 }
+
 .search-input::placeholder {
   color: var(--muted);
 }
+
 .search-clear {
   background: none;
   border: none;
@@ -535,9 +548,12 @@ body::before {
   transition: color .15s;
   flex-shrink: 0;
 }
+
 .search-clear:hover { color: var(--accent2); }
 .search-clear.visible { display: block; }
+
 .track.hidden { display: none; }
+
 .no-results {
   text-align: center;
   color: var(--muted);
@@ -550,7 +566,7 @@ body::before {
 
   body {
     align-items: flex-start;
-    overflow-y: auto;        
+    overflow-y: auto;      
     overflow-x: hidden;
   }
 
@@ -568,6 +584,7 @@ body::before {
   .player-panel {
     padding: 24px 20px 20px;
   }
+
   .vinyl-wrap {
     display: none;
   }
@@ -582,8 +599,8 @@ body::before {
   }
 
   .playlist-list {
-    overflow-y: visible;    
-    max-height: none;       
+    overflow-y: visible;     
+    max-height: none;      
   }
 
   .playlist-header {
