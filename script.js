@@ -1,0 +1,183 @@
+const PLAYLIST = [
+  { title: "Dusk Till Dawn",      artist: "ZAYN, Sia",                             duration: "4:00", color: "#e8c840", src: "audio/dusk.mp3" },
+  { title: "Stitches",            artist: "Shawn Mendes",                          duration: "3:28", color: "#ff5e3a", src: "audio/stitches.mp3" },
+  { title: "No Lie",              artist: "Sean Paul, Dua Lipa",                   duration: "3:31", color: "#5ec4ff", src: "audio/nolie.mp3" },
+  { title: "Night Changes",       artist: "One Direction",                         duration: "3:52", color: "#b67fff", src: "audio/nightchanges.mp3" },
+  { title: "Perfect",             artist: "Ed Sheeran",                            duration: "4:23", color: "#ffa040", src: "audio/perfect.mp3" },
+  { title: "I Wanna Be Yours",    artist: "Arctic Monkeys",                        duration: "3:03", color: "#40ffb4", src: "audio/iwannabe.mp3" },
+  { title: "Hey Mama",            artist: "David Guetta, Nicki Minaj, Bebe Rexha", duration: "3:41", color: "#ff85c0", src: "audio/heymama.mp3" },
+  { title: "Die With A Smile",    artist: "Lady Gaga, Bruno Mars",                 duration: "4:11", color: "#c084fc", src: "audio/diewith.mp3" },
+];
+
+let currentIndex = 0;
+let isPlaying    = false;
+let shuffleOn    = false;
+let repeatOn     = true;
+
+const audio        = document.getElementById('audioEl');
+const vinyl        = document.getElementById('vinyl');
+const tonearm      = document.getElementById('tonearm');
+const vinylLabel   = document.getElementById('vinylLabel');
+const songTitle    = document.getElementById('songTitle');
+const songArtist   = document.getElementById('songArtist');
+const progressFill = document.getElementById('progressFill');
+const progressTrack= document.getElementById('progressTrack');
+const timeElapsed  = document.getElementById('timeElapsed');
+const timeDuration = document.getElementById('timeDuration');
+const iconPlay     = document.getElementById('iconPlay');
+const iconPause    = document.getElementById('iconPause');
+const btnPlay      = document.getElementById('btnPlay');
+const loadingBar   = document.getElementById('loadingBar');
+const volSlider    = document.getElementById('volumeSlider');
+const volPct       = document.getElementById('volumePct');
+
+function fmt(sec) {
+  if (isNaN(sec) || sec < 0) return '0:00';
+  const m = Math.floor(sec / 60);
+  const s = Math.floor(sec % 60);
+  return m + ':' + (s < 10 ? '0' : '') + s;
+}
+function buildPlaylist() {
+  const list = document.getElementById('playlistList');
+  list.innerHTML = '';
+
+  PLAYLIST.forEach(function (track, i) {
+    const el = document.createElement('div');
+    el.className = 'track' +
+      (i === currentIndex ? ' active' + (isPlaying ? '' : ' paused') : '');
+
+    el.innerHTML =
+      '<div class="track-num">' + (i + 1) + '</div>' +
+      '<div class="track-eq">' +
+        '<div class="eq-bar"></div>' +
+        '<div class="eq-bar"></div>' +
+        '<div class="eq-bar"></div>' +
+      '</div>' +
+      '<div class="track-info">' +
+        '<div class="track-name">' + track.title + '</div>' +
+        '<div class="track-artist">' + track.artist + '</div>' +
+      '</div>' +
+      '<div class="track-duration">' + track.duration + '</div>';
+
+    el.addEventListener('click', function () { loadAndPlay(i); });
+    list.appendChild(el);
+  });
+}
+
+function loadTrack(index) {
+  currentIndex = index;
+  const track  = PLAYLIST[index];
+
+
+  songTitle.textContent  = track.title;
+  songArtist.textContent = track.artist;
+  timeDuration.textContent = track.duration;
+  vinylLabel.style.background = track.color;
+  btnPlay.style.boxShadow = '0 4px 20px ' + track.color + '66';
+  progressFill.style.width = '0%';
+  timeElapsed.textContent  = '0:00';
+
+  loadingBar.classList.add('show');
+  audio.src = track.src;
+  audio.load();
+
+  buildPlaylist();
+}
+
+
+function loadAndPlay(index) {
+  isPlaying = false;
+  loadTrack(index);
+  audio.play().catch(function (e) { console.error('Play error:', e); });
+}
+
+function togglePlay() {
+  if (!audio.src) { loadAndPlay(currentIndex); return; }
+  if (isPlaying) {
+    audio.pause();
+  } else {
+    audio.play().catch(function (e) { console.error('Play error:', e); });
+  }
+}
+
+audio.addEventListener('canplay', function () {
+  loadingBar.classList.remove('show');
+});
+
+audio.addEventListener('play', function () {
+  isPlaying = true;
+  vinyl.classList.add('spinning');
+  tonearm.classList.add('playing');
+  iconPlay.style.display  = 'none';
+  iconPause.style.display = 'block';
+  buildPlaylist();
+});
+
+audio.addEventListener('pause', function () {
+  isPlaying = false;
+  vinyl.classList.remove('spinning');
+  tonearm.classList.remove('playing');
+  iconPlay.style.display  = 'block';
+  iconPause.style.display = 'none';
+  buildPlaylist();
+});
+
+audio.addEventListener('timeupdate', function () {
+  if (!audio.duration) return;
+  const pct = (audio.currentTime / audio.duration) * 100;
+  progressFill.style.width    = pct + '%';
+  timeElapsed.textContent     = fmt(audio.currentTime);
+  timeDuration.textContent    = fmt(audio.duration);
+});
+
+audio.addEventListener('ended', function () {
+  if (repeatOn) {
+    audio.currentTime = 0;
+    audio.play();
+  } else {
+    const next = shuffleOn
+      ? Math.floor(Math.random() * PLAYLIST.length)
+      : (currentIndex + 1) % PLAYLIST.length;
+    loadAndPlay(next);
+  }
+});
+
+btnPlay.addEventListener('click', togglePlay);
+
+document.getElementById('btnNext').addEventListener('click', function () {
+  const next = shuffleOn
+    ? Math.floor(Math.random() * PLAYLIST.length)
+    : (currentIndex + 1) % PLAYLIST.length;
+  loadAndPlay(next);
+});
+
+document.getElementById('btnPrev').addEventListener('click', function () {
+  if (audio.currentTime > 3) { audio.currentTime = 0; return; }
+  const prev = (currentIndex - 1 + PLAYLIST.length) % PLAYLIST.length;
+  loadAndPlay(prev);
+});
+
+progressTrack.addEventListener('click', function (e) {
+  if (!audio.duration) return;
+  const rect = progressTrack.getBoundingClientRect();
+  audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+});
+
+audio.volume = 0.75;
+volSlider.addEventListener('input', function () {
+  audio.volume = volSlider.value / 100;
+  volPct.textContent = volSlider.value + '%';
+});
+document.getElementById('tagShuffle').addEventListener('click', function () {
+  shuffleOn = !shuffleOn;
+  this.classList.toggle('on', shuffleOn);
+});
+
+document.getElementById('tagRepeat').addEventListener('click', function () {
+  repeatOn = !repeatOn;
+  this.classList.toggle('on', repeatOn);
+});
+
+document.getElementById('trackCount').textContent = PLAYLIST.length;
+loadTrack(0);
+buildPlaylist();
