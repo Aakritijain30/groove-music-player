@@ -178,6 +178,41 @@ document.getElementById('tagRepeat').addEventListener('click', function () {
   this.classList.toggle('on', repeatOn);
 });
 
+const searchInput = document.getElementById('searchInput');
+const searchClear = document.getElementById('searchClear');
+
+searchInput.addEventListener('input', function () {
+  const query = this.value.trim().toLowerCase();
+  const tracks = document.querySelectorAll('#playlistList .track');
+  let visibleCount = 0;
+
+  searchClear.classList.toggle('visible', query.length > 0);
+
+  const old = document.querySelector('.no-results');
+  if (old) old.remove();
+
+  tracks.forEach(function (el, i) {
+    const title  = PLAYLIST[i].title.toLowerCase();
+    const artist = PLAYLIST[i].artist.toLowerCase();
+    const match  = title.includes(query) || artist.includes(query);
+    el.classList.toggle('hidden', !match);
+    if (match) visibleCount++;
+  });
+
+  if (visibleCount === 0 && query.length > 0) {
+    const msg = document.createElement('div');
+    msg.className = 'no-results';
+    msg.textContent = 'No songs found 🎵';
+    document.getElementById('playlistList').appendChild(msg);
+  }
+});
+
+searchClear.addEventListener('click', function () {
+  searchInput.value = '';
+  searchInput.dispatchEvent(new Event('input'));
+  searchInput.focus();
+});
+
 document.getElementById('trackCount').textContent = PLAYLIST.length;
 loadTrack(0);
 buildPlaylist();
