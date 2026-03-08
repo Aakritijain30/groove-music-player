@@ -4,6 +4,12 @@
 
 ---
 
+## 🔗 Live Demo
+
+👉 **[Click here to view the live site](https://Aakritijain30.github.io/groove-music-player)**
+
+---
+
 ## ✨ Features
 
 | Feature | Description |
