@@ -7,6 +7,7 @@ const PLAYLIST = [
   { title: "I Wanna Be Yours",    artist: "Arctic Monkeys",                        duration: "3:03", color: "#40ffb4", src: "audio/iwannabe.mp3" },
   { title: "Hey Mama",            artist: "David Guetta, Nicki Minaj, Bebe Rexha", duration: "3:41", color: "#ff85c0", src: "audio/heymama.mp3" },
   { title: "Die With A Smile",    artist: "Lady Gaga, Bruno Mars",                 duration: "4:11", color: "#c084fc", src: "audio/diewith.mp3" },
+  { title: "Make You Mine",       artist: "PUBLIC",                                duration: "3:56", color: "#264F73", src: "audio/makeyoumine.mp3" },
 ];
 
 let currentIndex = 0;
