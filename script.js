@@ -1,5 +1,6 @@
 const PLAYLIST = [
   { title: "Dusk Till Dawn",      artist: "ZAYN, Sia",                             duration: "4:00", color: "#e8c840", src: "audio/dusk.mp3" },
+  { title: "Closer",              artist: "The Chainsmokers"                       duration: "4:05", color: "#264F37", src: "audio/closer.mp3"},
   { title: "Stitches",            artist: "Shawn Mendes",                          duration: "3:28", color: "#ff5e3a", src: "audio/stitches.mp3" },
   { title: "No Lie",              artist: "Sean Paul, Dua Lipa",                   duration: "3:31", color: "#5ec4ff", src: "audio/nolie.mp3" },
   { title: "Night Changes",       artist: "One Direction",                         duration: "3:52", color: "#b67fff", src: "audio/nightchanges.mp3" },
