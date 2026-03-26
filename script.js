@@ -215,6 +215,56 @@ searchClear.addEventListener('click', function () {
   searchInput.focus();
 });
 
+// ── KEYBOARD CONTROLS ──
+document.addEventListener('keydown', function (e) {
+
+  // Search bar mein type kar rahe ho toh kaam mat karo
+  if (document.activeElement === searchInput) return;
+
+  switch (e.code) {
+
+    case 'Space':
+      e.preventDefault(); // page scroll rokna
+      togglePlay();
+      break;
+
+    case 'ArrowRight':
+      e.preventDefault();
+      // Next song
+      var next = shuffleOn
+        ? Math.floor(Math.random() * PLAYLIST.length)
+        : (currentIndex + 1) % PLAYLIST.length;
+      loadAndPlay(next);
+      break;
+
+    case 'ArrowLeft':
+      e.preventDefault();
+      // Previous song
+      if (audio.currentTime > 3) { audio.currentTime = 0; }
+      else {
+        var prev = (currentIndex - 1 + PLAYLIST.length) % PLAYLIST.length;
+        loadAndPlay(prev);
+      }
+      break;
+
+    case 'ArrowUp':
+      e.preventDefault();
+      // Volume up
+      audio.volume = Math.min(1, audio.volume + 0.1);
+      volSlider.value = Math.round(audio.volume * 100);
+      volPct.textContent = volSlider.value + '%';
+      break;
+
+    case 'ArrowDown':
+      e.preventDefault();
+      // Volume down
+      audio.volume = Math.max(0, audio.volume - 0.1);
+      volSlider.value = Math.round(audio.volume * 100);
+      volPct.textContent = volSlider.value + '%';
+      break;
+  }
+});
+
 document.getElementById('trackCount').textContent = PLAYLIST.length;
 loadTrack(0);
 buildPlaylist();
