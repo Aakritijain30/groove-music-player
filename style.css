@@ -208,7 +208,6 @@ body::before {
 }
 .song-title-inner {
   display: inline-block;
-  padding-right: 40px;
 }
 @keyframes marquee-once {
   0%   { transform: translateX(0%); }
