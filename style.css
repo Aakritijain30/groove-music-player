@@ -208,11 +208,14 @@ body::before {
 }
 .song-title-inner {
   display: inline-block;
-  animation: marquee-scroll 10s linear infinite;
-  padding-right: 60px;
+  animation: marquee-scroll 12s linear infinite;
+  animation-delay: 0s;
+  padding-right: 80px;
 }
 @keyframes marquee-scroll {
-  0%   { transform: translateX(0%); }
+  0%,
+  5%   { transform: translateX(0%); }
+  95%,
   100% { transform: translateX(-100%); }
 }
 @keyframes marquee {
