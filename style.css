@@ -212,7 +212,7 @@ body::before {
   padding-right: 60px;
 }
 @keyframes marquee-scroll {
-  0%   { transform: translateX(100%); }
+  0%   { transform: translateX(0%); }
   100% { transform: translateX(-100%); }
 }
 @keyframes marquee {
