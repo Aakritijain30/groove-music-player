@@ -75,11 +75,10 @@ function loadTrack(index) {
 
 
   songTitle.textContent = track.title;
-// Animation restart karo
 songTitle.style.animation = 'none';
-setTimeout(function() {
-  songTitle.style.animation = '';
-}, 50);
+songTitle.style.transform = 'translateX(0)';
+void songTitle.offsetWidth;
+songTitle.style.animation = 'marquee-once 6s linear 1 forwards';
   songArtist.textContent = track.artist;
   timeDuration.textContent = track.duration;
   vinylLabel.style.background = track.color;
