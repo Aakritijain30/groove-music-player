@@ -74,7 +74,7 @@ function loadTrack(index) {
   const track  = PLAYLIST[index];
 
 
-  songTitle.textContent  = track.title;
+  songTitle.textContent = track.title + '          ' + track.title;
   songArtist.textContent = track.artist;
   timeDuration.textContent = track.duration;
   vinylLabel.style.background = track.color;
