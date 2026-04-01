@@ -199,10 +199,17 @@ body::before {
   line-height: 1;
   margin-bottom: 5px;
   white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+overflow: hidden;
+text-overflow: ellipsis;
+animation: marquee 8s linear infinite;
 }
 
+@keyframes marquee {
+  0%   { text-indent: 0; }
+  30%  { text-indent: 0; }
+  70%  { text-indent: -100%; }
+  100% { text-indent: 0; }
+}
 .song-artist {
   font-size: 12px;
   color: var(--muted);
