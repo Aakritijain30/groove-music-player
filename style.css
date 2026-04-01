@@ -199,11 +199,18 @@ body::before {
   line-height: 1;
   margin-bottom: 5px;
   white-space: nowrap;
-overflow: hidden;
-text-overflow: ellipsis;
-animation: marquee 8s linear infinite;
+  overflow: hidden;
 }
 
+.song-title-inner {
+  display: inline-block;
+  animation: marquee-scroll 10s linear infinite;
+  padding-right: 60px;
+}
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
 @keyframes marquee {
   0%   { text-indent: 0; }
   30%  { text-indent: 0; }
