@@ -203,22 +203,11 @@ body::before {
   margin-bottom: 5px;
   white-space: nowrap;
   overflow: hidden;
+  text-overflow: ellipsis;
   max-width: 100%;
   width: 100%;
 }
-.song-title-inner {
-  display: inline-block;
-}
-@keyframes marquee-once {
-  0%   { transform: translateX(0%); }
-  100% { transform: translateX(-100%); }
-}
-@keyframes marquee {
-  0%   { text-indent: 0; }
-  30%  { text-indent: 0; }
-  70%  { text-indent: -100%; }
-  100% { text-indent: 0; }
-}
+
 .song-artist {
   font-size: 12px;
   color: var(--muted);
