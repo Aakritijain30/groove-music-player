@@ -66,10 +66,15 @@
       <div class="volume-pct" id="volumePct">75%</div>
     </div>
   </div>
+ 
   <div class="playlist-panel">
+    <div class="playlist-tabs">
+      <button class="tab-btn active" id="tab1" onclick="switchTab(1)">🎵 English Vibes</button>
+      <button class="tab-btn" id="tab2" onclick="switchTab(2)">❤️ Hindi Romance</button>
+    </div>
     <div class="playlist-header">
-      <div class="playlist-title">Now Playing</div>
-      <div class="playlist-meta"><span id="trackCount">8</span> tracks · Late Night Sessions</div>
+      <div class="playlist-title" id="playlistTitle">English Vibes</div>
+      <div class="playlist-meta"><span id="trackCount">10</span> tracks</div>
       <div class="search-wrap">
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" class="search-icon">
     <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
