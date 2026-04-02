@@ -295,7 +295,7 @@ function switchTab(num) {
     loadTrack(0);
   } else {
     songTitle.textContent = 'No songs yet';
-    songArtist.textContent = 'Add songs to this playlist';
+    
     document.getElementById('playlistList').innerHTML =
       '<div class="no-results">No songs in this playlist yet 🎵</div>';
   }
