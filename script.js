@@ -1,4 +1,4 @@
-const PLAYLIST = [
+const PLAYLIST1 = [
   { title: "Dusk Till Dawn",      artist: "ZAYN, Sia",                             duration: "4:00", color: "#e8c840", src: "audio/dusk.mp3" },
   { title: "Closer",              artist: "The Chainsmokers",                      duration: "4:05", color: "#264F37", src: "audio/closer.mp3"},
   { title: "Counting Stars",      artist: "OneRepublic",                           duration: "4:17", color: "#ff6b35", src: "audio/counting_stars.mp3" },
@@ -12,7 +12,12 @@ const PLAYLIST = [
   { title: "Die With A Smile",    artist: "Lady Gaga, Bruno Mars",                 duration: "4:11", color: "#c084fc", src: "audio/diewith.mp3" },
   { title: "Make You Mine",       artist: "PUBLIC",                                duration: "3:56", color: "#264F73", src: "audio/makeyoumine.mp3" },
 ];
+const PLAYLIST2 = [
+  // Hindi songs baad mein add karna
+];
 
+let activePlaylist = 1;
+let PLAYLIST = PLAYLIST1;
 let currentIndex = 0;
 let isPlaying    = false;
 let shuffleOn    = false;
@@ -266,7 +271,36 @@ document.addEventListener('keydown', function (e) {
       break;
   }
 });
+// ── TAB SWITCH ──
+function switchTab(num) {
+  activePlaylist = num;
+  PLAYLIST = num === 1 ? PLAYLIST1 : PLAYLIST2;
+  currentIndex = 0;
+  isPlaying = false;
+  audio.pause();
+  audio.src = '';
 
+  // UI update
+  document.getElementById('tab1').classList.toggle('active', num === 1);
+  document.getElementById('tab2').classList.toggle('active', num === 2);
+  document.getElementById('playlistTitle').textContent = num === 1 ? 'English Vibes' : 'Hindi Romance';
+  document.getElementById('trackCount').textContent = PLAYLIST.length;
+
+  vinyl.classList.remove('spinning');
+  tonearm.classList.remove('playing');
+  iconPlay.style.display = 'block';
+  iconPause.style.display = 'none';
+
+  if (PLAYLIST.length > 0) {
+    loadTrack(0);
+  } else {
+    songTitle.textContent = 'No songs yet';
+    songArtist.textContent = 'Add songs to this playlist';
+    document.getElementById('playlistList').innerHTML =
+      '<div class="no-results">No songs in this playlist yet 🎵</div>';
+  }
+  buildPlaylist();
+}
 document.getElementById('trackCount').textContent = PLAYLIST.length;
 loadTrack(0);
 buildPlaylist();
