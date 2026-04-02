@@ -15,6 +15,7 @@ const PLAYLIST1 = [
 const PLAYLIST2 = [
   { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/Banjaare_-_Bairan_Lyrics_48KBPS.mp3" },
   { title: "Darkhaast",           artist: "Arijit Singh & Sunidhi Chauhan",        duration: "6:15", color: "#264F37", src: "audio/Arijit_Singh_-_Darkhaast_Lyrics_Ft._Sunidhi_Chauhan_Shivaay_48kbps.mp3"},
+  { title: "Nazm Nazm",           artist: "Arko",                                  duration: "3:56", color: "#ff6b35", src: "audio/Nazm_Nazm_-_Lyrical_Bareilly_Ki_Barfi_Rajkummar_Rao_Ayushmann_Khurrana_Kriti_Sanon_Arko_48kbps.mp3" },
 ];
 
 let activePlaylist = 1;
