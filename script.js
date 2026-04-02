@@ -13,7 +13,7 @@ const PLAYLIST1 = [
   { title: "Make You Mine",       artist: "PUBLIC",                                duration: "3:56", color: "#264F73", src: "audio/makeyoumine.mp3" },
 ];
 const PLAYLIST2 = [
-  { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/bairan.mp3" },
+  { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/Banjaare_-_Bairan_Lyrics_48KBPS.mp3" },
 ];
 
 let activePlaylist = 1;
