@@ -573,6 +573,8 @@ body::before {
 .playlist-tabs {
   display: flex;
   border-bottom: 1px solid var(--border);
+  flex-shrink: 0;        
+  width: 100%;          
 }
 
 .tab-btn {
@@ -582,7 +584,8 @@ body::before {
   border-bottom: 2px solid transparent;
   color: var(--muted);
   font-family: 'DM Sans', sans-serif;
-  font-size: 12px;
+  font-size: 11px;       
+  padding: 12px 4px;
   font-weight: 500;
   padding: 14px 8px;
   cursor: pointer;
