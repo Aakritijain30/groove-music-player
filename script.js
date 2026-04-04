@@ -18,7 +18,11 @@ const PLAYLIST2 = [
   { title: "Nazm Nazm",           artist: "Arko",                                  duration: "3:56", color: "#ff6b35", src: "audio/Nazm_Nazm_-_Lyrical_Bareilly_Ki_Barfi_Rajkummar_Rao_Ayushmann_Khurrana_Kriti_Sanon_Arko_48kbps.mp3" },
   { title: "Tera Deedar Hua",     artist: "Pritam, Rahat Fateh Ali Khan",          duration: "5:51", color: "#ff5e3a", src: "audio/Tera_Deedar_Hua_-_Lyrical_Song_Emraan_Hashmi_Esha_Jannat_2_Javed_Ali_Rahat_Fateh_Ali_Khan_48kbps.mp3" },
   { title: "Rabba",               artist: "Mohit Chauhan",                         duration: "4:54", color: "#ffcc00", src: "audio/Heropanti_Rabba_Full_Audio_Song_Mohit_Chauhan_Tiger_Shroff_Kriti_Sanon_48kbps.mp3" },
-  
+  { title: "Sajni",               artist: "Arijit Singh, Ram Sampath",             duration: "2:47", color: "#5ec4ff", src: "audio/Sajni_-_Arijit_Singh_-_Lyrics_-_Lapata_ladies_48KBPS.mp3" },
+  { title: "Mere Sohneya",        artist: "Parampara Thakur, Sachet Tandon",       duration: "3:14", color: "#b67fff", src: "audio/Mere_Sohneya_Song_Lyrics_Kabir_Singh_Movie_Song_Parampara_Thakur_Sachet_Tandon_48KBPS.mp3" },
+  { title: "Kasturi",             artist: "Arijit Singh",                          duration: "4:01", color: "#ffa040", src: "audio/Kasturi_Amar_Prem_Ki_Prem_Kahani_Arijit_Singh_Prasad_S_Jio_Cinema_48kbps.mp3" },
+  { title: "Sang Rahiyo",         artist: "Jasleen Royal",                         duration: "3:03", color: "#40ffb4", src: "audio/Sang_Rahiyo_Official_Video_Jasleen_Royal_ft__Ranveer_Allahbadia_Ujjwal_Kashyap_Neeraj_Rajawat_48KBPS.mp3" },
+  { title: "Jaan Ban Gaye",       artist: "Mithoon, Vishal Mishra, Asees Kaur",    duration: "3:31", color: "#ff85c0", src: "audio/Jaan_Ban_Gaye_Lyrics_Khuda_Haafiz_Vidyut_Jammwal_Shivaleeka_O_Mithoon_Vishal_M_Asees_K_48KBPS.mp3" },
 
 
 
