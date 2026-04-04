@@ -15,7 +15,7 @@ const PLAYLIST1 = [
 const PLAYLIST2 = [
   { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/Banjaare_-_Bairan_Lyrics_48KBPS.mp3" },
   { title: "Darkhaast",           artist: "Arijit Singh & Sunidhi Chauhan",        duration: "6:15", color: "#264F37", src: "audio/Arijit_Singh_-_Darkhaast_Lyrics_Ft._Sunidhi_Chauhan_Shivaay_48kbps.mp3"},
-  { title: "Nazm Nazm",           artist: "Arko",                                  duration: "3:56", color: "#ff6b35", src: "audio/Nazm_Nazm_-_Lyrical_Bareilly_Ki_Barfi_Rajkummar_Rao_Ayushmann_Khurrana_Kriti_Sanon_Arko_48kbps.mp3" },
+  { title: "Nazm Nazm",           artist: "Arko",                                  duration: "3:43", color: "#ff6b35", src: "audio/Nazm_Nazm_Lyrics_Bareilly_Ki_Barfi_Kriti_Sanon_Arko_Ayushmann_Khurrana_Rajkummar_Rao._48KBPS.mp3" },
   { title: "Tera Deedar Hua",     artist: "Pritam, Rahat Fateh Ali Khan",          duration: "5:51", color: "#ff5e3a", src: "audio/Tera_Deedar_Hua_-_Lyrical_Song_Emraan_Hashmi_Esha_Jannat_2_Javed_Ali_Rahat_Fateh_Ali_Khan_48kbps.mp3" },
   { title: "Rabba",               artist: "Mohit Chauhan",                         duration: "4:54", color: "#ffcc00", src: "audio/Heropanti_Rabba_Full_Audio_Song_Mohit_Chauhan_Tiger_Shroff_Kriti_Sanon_48kbps.mp3" },
   { title: "Sajni",               artist: "Arijit Singh, Ram Sampath",             duration: "2:47", color: "#5ec4ff", src: "audio/Sajni_-_Arijit_Singh_-_Lyrics_-_Lapata_ladies_48KBPS.mp3" },
