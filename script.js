@@ -11,11 +11,6 @@ const PLAYLIST1 = [
   { title: "Hey Mama",            artist: "David Guetta, Nicki Minaj, Bebe Rexha", duration: "3:41", color: "#ff85c0", src: "audio/heymama.mp3" },
   { title: "Die With A Smile",    artist: "Lady Gaga, Bruno Mars",                 duration: "4:11", color: "#c084fc", src: "audio/diewith.mp3" },
   { title: "Make You Mine",       artist: "PUBLIC",                                duration: "3:56", color: "#264F73", src: "audio/makeyoumine.mp3" },
-  { title: "Shape Of You ",       artist: "Ed Sheeran",                            duration: "3:53", color: "#e8c840", src: "audio/audio/Ed_Sheeran_Shape_of_You_Lyrics_48KBPS.mp3" },
-  { title: "Fairytale",           artist: "Alexander Rybak",                       duration: "3:02", color: "#264F37", src: "audio/audio/Alexander_Rybak_-_Fairytale_Lyrics_Norway_Eurovision_Winner_2009_48kbps.mp3"},
-  { title: "Criminal",            artist: "Britney Spears",                        duration: "3:43", color: "#ff6b35", src: "audio/audio/Britney_Spears_-_Criminal_Lyrics_48kbps.mp3" },
-  { title: "Alone, Pt. II",       artist: "Alan Walker & Ava Max",                 duration: "2:57", color: "#ff5e3a", src: "audio/audio/Alan_Walker_Ava_Max_-_Alone_Pt__II_Lyrics_48kbps.mp3" },
-  { title: "A Thousand Years",    artist: "Christina Perri",                       duration: "4:45", color: "#ffcc00", src: "audio/audio/Christina_Perri_-_A_Thousand_Years_48kbps.mp3" },
   
 ];
 const PLAYLIST2 = [
