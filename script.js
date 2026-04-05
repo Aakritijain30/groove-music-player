@@ -40,7 +40,12 @@ const PLAYLIST2 = [
   { title: "Be Intehaan",         artist: "Atif Aslam",                            duration: "4:40", color: "#ffcc00", src: "audio/Be_Intehaan_-_Atif_Aslam_lyrics_video_48kbps.mp3" },
   { title: "Haseen",              artist: "Talwiinder",                            duration: "2:54", color: "#5ec4ff", src: "audio/HASEEN_-_TALWIINDER_NDS_RIPPY_Official_Visualizer_48kbps.mp3" },
   { title: "Wishes",              artist: "Hasan Raheem & Talwiinder",             duration: "3:38", color: "#ffa040", src: "audio/Hasan_Raheem_-_Wishes_ft_Talwiinder_Prod_by_Umair_Official_Lyric_Video_48kbps.mp3" },
-  
+  { title: "GF BF",               artist: "Gurinder Seagal, Jacqueline Fernandez", duration: "4:03", color: "#ffa040", src: "audio/GF_BF_Lyrics_-_Ft__gurinder_seagal_i_wanna_take_you_up_and_down_round_and_round_lyrics_48KBPS.mp3" },
+  { title: "Finding Her",         artist: "Kushagra Thakur",                       duration: "3:27", color: "#40ffb4", src: "audio/Kushagra_-_Finding_Her_Lyrics_48kbps.mp3" },
+  { title: "Qaafirana",           artist: "Arijit Singh, Nikhita Gandhi",          duration: "5:41", color: "#ff85c0", src: "audio/Qaafirana_Lyrical_Kedarnath_Arijit_Singh_Nikhital_Sushant_S_Rajput_Sara_Ali_Khan___48kbps.mp3" },
+  { title: "Pal Pal",             artist: "Talwiinder",                            duration: "3:28", color: "#c084fc", src: "audio/Afusic_-_Pal_Pal_with_Talwiinder_Official_Visualiser_Prod__AliSoomroMusic_48kbps.mp3" },
+  { title: "Maiyya Mainu",        artist: "Sachet–Parampara",                      duration: "3:56", color: "#264F73", src: "audio/Maiyya_Mainu_Song_Full_Video_Jersey_Shahid_Kapoor_Mrunal_Thakur_Maiyya_Mainu_Yaad_Aave_128KBPS.mp3" },
+
 ];
 
 let activePlaylist = 1;
