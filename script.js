@@ -14,6 +14,7 @@ const PLAYLIST1 = [
 ];
 const PLAYLIST2 = [
   { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/Banjaare_-_Bairan_Lyrics_48KBPS.mp3" },
+  { title: "Jhol",                artist: "Maanu, Annural Khalid",                 duration: "4:23", color: "#c084fc", src: "audio/Maanu_Annural_Khalid_-_Jhol_Lyrics_48KBPS.mp3" },
   { title: "Darkhaast",           artist: "Arijit Singh & Sunidhi Chauhan",        duration: "6:15", color: "#264F37", src: "audio/Arijit_Singh_-_Darkhaast_Lyrics_Ft._Sunidhi_Chauhan_Shivaay_48kbps.mp3"},
   { title: "Nazm Nazm",           artist: "Arko",                                  duration: "3:43", color: "#ff6b35", src: "audio/Nazm_Nazm_Lyrics_Bareilly_Ki_Barfi_Kriti_Sanon_Arko_Ayushmann_Khurrana_Rajkummar_Rao._48KBPS.mp3" },
   { title: "Tera Deedar Hua",     artist: "Pritam, Rahat Fateh Ali Khan",          duration: "5:51", color: "#ff5e3a", src: "audio/Tera_Deedar_Hua_-_Lyrical_Song_Emraan_Hashmi_Esha_Jannat_2_Javed_Ali_Rahat_Fateh_Ali_Khan_48kbps.mp3" },
@@ -23,10 +24,27 @@ const PLAYLIST2 = [
   { title: "Kasturi",             artist: "Arijit Singh",                          duration: "4:01", color: "#ffa040", src: "audio/Kasturi_Amar_Prem_Ki_Prem_Kahani_Arijit_Singh_Prasad_S_Jio_Cinema_48kbps.mp3" },
   { title: "Sang Rahiyo",         artist: "Jasleen Royal",                         duration: "3:03", color: "#40ffb4", src: "audio/Sang_Rahiyo_Official_Video_Jasleen_Royal_ft__Ranveer_Allahbadia_Ujjwal_Kashyap_Neeraj_Rajawat_48KBPS.mp3" },
   { title: "Jaan Ban Gaye",       artist: "Mithoon, Vishal Mishra, Asees Kaur",    duration: "3:31", color: "#ff85c0", src: "audio/Jaan_Ban_Gaye_Lyrics_Khuda_Haafiz_Vidyut_Jammwal_Shivaleeka_O_Mithoon_Vishal_M_Asees_K_48KBPS.mp3" },
-
-
-
-
+  { title: "Malang Sajna",        artist: "Sachet Tandon, Parampara Tandon",       duration: "2:37", color: "#264F73", src: "audio/Malang_Sajna_Video_Sachet_Tandon_Parampara_Tandon_Adil_Shaikh_Kumaar_Bhushan_Kumar_48kbps.mp3" },
+  { title: "Tainu Khabar Nahi",   artist: "Arijit Singh",                          duration: "3:16", color: "#e8c840", src: "audio/Tainu_Khabar_Nahi_-_Arijit_Singh_Munjya_Sharvari_Abhay_Verma_Sachin-Jigar_Amitabh_B_Lyrical_48KBPS.mp3" },
+  { title: "Tum Se",              artist: "Sachin-Jigar, Raghav, Varun Jain",      duration: "4:21", color: "#264F37", src: "audio/Tum_Se_Full_Video_Shahid_Kapoor_Kriti_Sachin-Jigar_Raghav_Chaitanya_Varun_Jain_Indraneel_48kbps.mp3"},
+  { title: "Maiyya Mainu",        artist: "Sachet-Parampara",                      duration: "4:01", color: "#ff6b35", src: "audio/Maiyya_Mainu_-_Lyrical_Jersey_Shahid_Kapoor_Mrunal_Thakur_Sachet-Parampara_Shellee_Gowtam_T_48KBPS.mp3" },
+  { title: "Qaafirana",           artist: "Arijit Singh & Nikhital",               duration: "5:41", color: "#ff5e3a", src: "audio/Qaafirana_Lyrical_Kedarnath_Arijit_Singh_Nikhital_Sushant_S_Rajput_Sara_Ali_Khan_._48kbps.mp3" },
+  { title: "Khoobsurat",          artist: "Vishal Mishra, Sachin-Jigar",           duration: "4:04", color: "#ffcc00", src: "audio/Khoobsurat_Lyrics_-_Stree_2_Sachin-Jigar_Vishal_Mishra_48kbps.mp3" },
+  { title: "Apna Bana Le",        artist: "Sachin-J, Arijit S",                    duration: "4:21", color: "#5ec4ff", src: "audio/Apna_Bana_Le_-_Bhediya_Official_Lyrics_Video_Varun_Dhawan_Kriti_S_Sachin-J_Arijit_S_Amitabh_B_48kbps.mp3" },
+  { title: "O Saathi",            artist: "Atif Aslam",                            duration: "4:10", color: "#b67fff", src: "audio/Atif_Aslam_-_O_Saathi_Lyrics_48KBPS.mp3" },
+  { title: "Jag Ghoomeya",        artist: "Rahat Fateh Ali Khan",                  duration: "4:34", color: "#ffa040", src: "audio/Lyrical_Jag_Ghoomeya_Song_with_Lyrics_Sultan_Salman_Anushka_Vishal_Shekhar_Irshad_Kamil_48kbps.mp3" },
+  { title: "Tere Sang Yaara",     artist: "Atif Aslam",                            duration: "4:42", color: "#40ffb4", src: "audio/Tere_sang_yaara_Lyrics_-_Atif_Aslam_48kbps.mp3" },
+  { title: "Kesariya",            artist: "Arijit Singh",                          duration: "4:25", color: "#ff85c0", src: "audio/Kesariya_Lyrics_Full_Song_-_Brahmastra_Arijit_Singh_Kesariya_Tera_Ishq_Hai_Piya_48kbps.mp3" },
+  { title: "GF BF",               artist: "Gurinder Seagal, Jacqueline Fernandez", duration: "4:03", color: "#c084fc", src: "audio/GF_BF_Lyrics_-_Ft_.gurinder_seagal_i_wanna_take_you_up_and_down_round_and_round_lyrics_48KBPS.mp3" },
+  { title: "leja",                artist: "Jai Dhir",                              duration: "3:18", color: "#264F73", src: "audio/Leja_-_Lost_Stories_JAI_DHIR_48kbps.mp3" },
+  { title: "Jogi",                artist: "Yasser Desai, Aakanksha Sharma",        duration: "4:24", color: "#e8c840", src: "audio/Jogi_Shaadi_Mein_Zaroor_Aana_-Yasser_Desai_Aakanksha_Sharma_Lyrics_HD_48KBPS.mp3" },
+  { title: "Sahiba",              artist: "Jasleen Royal & Stebin Ben",            duration: "3:36", color: "#264F37", src: "audio/Jasleen_Royal_Stebin_Ben_-_Sahiba_Lyrics_Vijay_Deverakonda_Radhika_Madan_48kbps.mp3"},
+  { title: "Finding Her",         artist: "Kushagra",                              duration: "3:27", color: "#ff6b35", src: "audio/            .mp3" },
+  { title: "Chaap Tilak",         artist: "Nakash Aziz",                           duration: "2:39", color: "#ff5e3a", src: "audio/Chaap_Tilak_From_Dark_7_White_48KBPS.mp3" },
+  { title: "Be Intehaan",         artist: "Atif Aslam",                            duration: "4:40", color: "#ffcc00", src: "audio/Be_Intehaan_-_Atif_Aslam_lyrics_video_48kbps.mp3" },
+  { title: "Haseen",              artist: "Talwiinder",                            duration: "2:54", color: "#5ec4ff", src: "audio/HASEEN_-_TALWIINDER_NDS_RIPPY_Official_Visualizer_48kbps.mp3" },
+  { title: "Pal Pal",             artist: "Talwiinder",                            duration: "3:28", color: "#b67fff", src: "audio/Afusic_-_Pal_Pal_with_Talwiinder_Official_Visualiser_Prod._AliSoomroMusic_48kbps.mp3" },
+  { title: "Wishes",              artist: "Hasan Raheem & Talwiinder",             duration: "3:38", color: "#ffa040", src: "audio/Hasan_Raheem_-_Wishes_ft_Talwiinder_Prod_by_Umair_Official_Lyric_Video_48kbps.mp3" },
   
 ];
 
