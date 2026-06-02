@@ -18,6 +18,7 @@ const PLAYLIST1 = [
   { title: "A Thousand Years",    artist: "Christina Perri",                       duration: "4:45", color: "#ffcc00", src: "audio/Christina_Perri_-_A_Thousand_Years_48kbps.mp3" },
 ];
 const PLAYLIST2 = [
+  { title: "I'll Be Waiting (Kabhi Jo Baadal)",               artist: "Arjun Feat.Arijit Singh",                         duration: "4:00", color: "#ffcc00", src: "audio/ill_be_waiting.mp3" },
   { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/Banjaare_-_Bairan_Lyrics_48KBPS.mp3" },
   { title: "Jhol",                artist: "Maanu, Annural Khalid",                 duration: "4:23", color: "#c084fc", src: "audio/Maanu_Annural_Khalid_-_Jhol_Lyrics_48KBPS.mp3" },
   { title: "Darkhaast",           artist: "Arijit Singh & Sunidhi Chauhan",        duration: "6:15", color: "#264F37", src: "audio/Arijit_Singh_-_Darkhaast_Lyrics_Ft._Sunidhi_Chauhan_Shivaay_48kbps.mp3"},
