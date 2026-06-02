@@ -19,7 +19,7 @@ const PLAYLIST1 = [
 ];
 const PLAYLIST2 = [
   { title: "I'll Be Waiting (Kabhi Jo Baadal)",               artist: "Arjun Feat.Arijit Singh",                         duration: "4:00", color: "#ffcc00", src: "audio/ill_be_waiting.mp3" },
-  { title: "Humraah",             artist: "Sachet T",                              duration: "5:00", color: "#5ec4ff", src: "audio/Humraah.mp3" },
+  { title: "Humraah",             artist: "Sachet T",                              duration: "5:00", color: "#5ec4ff", src: "audio/humraah.mp3" },
   { title: "Bairan",              artist: "Banjaare",                              duration: "2:29", color: "#e8c840", src: "audio/Banjaare_-_Bairan_Lyrics_48KBPS.mp3" },
   { title: "OK Jaanu",            artist: "A.R. Rahman",                           duration: "3:48", color: "#40ffb4", src: "audio/ok_jaanu.mp3" },
   { title: "Jhol",                artist: "Maanu, Annural Khalid",                 duration: "4:23", color: "#c084fc", src: "audio/Maanu_Annural_Khalid_-_Jhol_Lyrics_48KBPS.mp3" },
